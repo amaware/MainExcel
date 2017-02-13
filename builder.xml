@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MainExcel.makejar" default="makejar" basedir=".">
+	<target name="makejar" description="Make JAR for mainexcel">
+		<jar jarfile="..\..\jar\mainexcel.jar" 
+			includes="net\amaware\apps\mainexcel\*.class" 
+			basedir="bin"/>
+	</target>
+	
+</project>

@@ -1,0 +1,15 @@
+jdbc:mysql://db153.pair.com:3306/dnapersonal_dna	table_codes	OPTIONS	2017-02-08 19:51:59.0	
+PK-UNIQUE	IND-UNIQUE	PK-DUP	IND-DUP	
+id	tab_name	code_name	code_value	user_mod_id	user_mod_ts	
+33	logs	entry_type	access	amadduci	2016-12-28 08:29:36.0	
+35	logs	entry_type	contact	amadduci	2016-12-28 08:29:36.0	
+31	logs	entry_type	email	amadduci	2016-12-28 08:29:36.0	
+34	logs	entry_type	login	amadduci	2016-12-28 08:29:36.0	
+32	logs	entry_type	search	amadduci	2016-12-28 08:29:36.0	
+36	logs	entry_type	test	amadduci	2016-12-28 08:29:37.0	
+40	roles	application	admin	amadduci	2017-01-02 11:34:36.0	
+42	roles	application	lead	amadduci	2017-01-02 11:34:36.0	
+41	roles	application	manager	amadduci	2017-01-02 11:34:36.0	
+38	roles	person	clerk	amadduci	2017-01-02 11:34:35.0	
+37	roles	person	manager	amadduci	2017-01-02 11:34:35.0	
+39	roles	person	sales	amadduci	2017-01-02 11:34:35.0	

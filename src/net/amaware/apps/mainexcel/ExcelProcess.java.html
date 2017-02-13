@@ -1,0 +1,1457 @@
+<html>
+<head>
+<style type='text/css'> .tdtitleend{background-color:#ECECEC;color:#000080;border:0;font:.7em; font-style:italic; text-align:center;valign:center;} .tdhead{background-color:#FFFDED;color:#000080;text-align:center;valign:center;font-size: .7em;font-weight:bold;} .tralt1{background-color:#ECECEC;} .tralt2{background-color:#EBF4EA;} .tdalt1{color:#0000FF;border:0;} .tdalt2{color:#744A00;border:0;} .tdaltmin{border:0;text-align:left;font-size:85%;font-style:italic;color:gray;} .tdcolnull{border:0;text-align:center;font-size:70%;font-style:italic;color:gray;background-color:white;} .tdbrk{background-color:#000080;color:#FFFFFF;border:0;} .tdbrkhd{background-color:#FFFFFF;color:#FFFFFF;border:0;font-size:0em;padding:0em;margin:0em;} .tdbrkhdsh{color:#000000;} .tdbrkhdlo{background-color:#C0C0C0;color:#C0C0C0;padding:0em;margin:0em;font-size:.1em;} .tdbrkhdhi{background-color:#00FFFF;color:#00FFFF;padding:0;margin:0;} .tdintchtl{background-color:#FFFDED;color:#000080;border:0em;border-top:.3em solid white;font-size:.1em;} .tdintchhd{background-color:#FFFDED;color:#000080;text-align:center;valign:center;border:0em;border-top:.1em solid silver;border-bottom:.1em solid silver;color:gray;font-size: .9em;} .tdpageh{background-color:#EBF5FC;color:#008080;text-align:center;valign:center; font-weight:bold;} .tdtablehd{background-color:#FFFFFF;color:#008080;text-align:center; valign:center;border-top: solid;border-bottom: thin solid;font-weight:bold;} .spanrepeat{font-size:90%;font-style:italic;color:lightgray;font-weight:normal;} .spanmintitle{font-size:70%;font-style:italic;color:gray;font-weight:normal;} </style>
+<title>
+ExcelProcess.java.html
+</title>
+<meta name="author" content="Java Batch Enterprise" />
+<meta name="copyright" content="Angelo Adduci" />
+<meta name="contact" content="angelo@angeloadduci.com" />
+</head>
+<body>
+<br><table border='3' cellspacing='2' cellpadding='2' align=center  width=100%><tbody style=' text-align:left; font-size: .6em;font-family:monospace;'>
+<tr   style='border:0;font-size:1em;font-family:monospace;'>
+<td  class='tdpageh'>MainExcel&nbsp;for&nbsp;angel_000</td>
+<td  class='tdpageh'>jdbc:mysql://db141b.pair.com:3306/amaware_dna&nbsp;via&nbsp;Windows&nbsp;8</td>
+<td  class='tdpageh'>2017-02-11&nbsp;10:16:37.57</td>
+</tr>
+</tbody></table>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  style='color:#857600;text-align:left;valign:center;border-style:ridge;font-weight:bold;font-size:1em;font-family:monospace;'>net.amaware.apps.mainexcel.ExcelProcess=>processThis</td>
+</tr>
+<br><table border='0' cellspacing='5' cellpadding='2' width=100% align=center><tbody style='text-align:left;margin:0;font-size:1em;font-family:monospace; '>
+<tr   style='border:0;font-size:1em;font-family:monospace;'>
+<td  style='color:#008000;text-align:left; valign: center;font-size:.8em;font-family:monospace;font-weight:bold;margin:0;'>outExcelFile&nbsp;Opened&nbsp;Name=C:\projects\amawareJavaDev\projects\MainExcel\src\net\amaware\apps\mainexcel\ExcelProcess.java.xls</td>
+</tr>
+</tbody></table>
+<br><table   border='0' cellspacing='0' cellpadding='0' ><tbody  style='padding:0em;text-align:left;font-size:1em;font-family:monospace; '>
+<tr   style='border:0;font-size:1em;font-family:monospace;'>
+<td  colspan=5 class='tdtablehd' style='font-size:1em;'>ExcelProcess.java</td>
+</tr>
+</tbody></table>
+<br><table   border='1' cellspacing='0' cellpadding='3' ><tbody  style='padding:0em;text-align:left;font-size:1em;font-family:monospace; '>
+<tr>
+<td  class='tdhead'>#</td>
+<td  class='tdhead'>FirstCol</td>
+<td  class='tdhead'>SecoundCol</td>
+<td  class='tdhead'>ThirdCol</td>
+<td  class='tdhead'>FourthCol</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>1</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>2</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>3</td>
+<td  class='tdalt1' style='text-align:left;'>package&nbsp;net.amaware.apps.mainexcel;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>4</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>5</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;java.io.IOException;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>6</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;java.util.ArrayList;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>7</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;java.util.LinkedHashMap;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>8</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;java.util.List;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>9</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;java.util.Vector;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>10</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>11</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;org.apache.poi.ss.usermodel.CellStyle;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>12</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>13</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.app.DataStoreReport;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>14</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.ACommDb;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>15</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.ADataColResult;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>16</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.AException;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>17</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.AFileExcelPOI;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>18</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.AFileO;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>19</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.autil.AProperties;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>20</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>21</td>
+<td  class='tdalt1' style='text-align:left;'>//import&nbsp;net.amaware.serv.DataStore;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>22</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.serv.HtmlTargetServ;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>23</td>
+<td  class='tdalt1' style='text-align:left;'>import&nbsp;net.amaware.serv.SourceProperty;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>24</td>
+<td  class='tdalt1' style='text-align:left;'>//import&nbsp;net.amaware.autil.ASqlStatements;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>25</td>
+<td  class='tdalt1' style='text-align:left;'>//import&nbsp;net.amaware.serv.SourceServProperty;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>26</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>27</td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>28</td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>29</td>
+<td  class='tdalt1' style='text-align:left;'>/**</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>30</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;*&nbsp;@author&nbsp;PSDAA88&nbsp;-&nbsp;Angelo&nbsp;M&nbsp;Adduci&nbsp;-&nbsp;Sep&nbsp;6,&nbsp;2005&nbsp;3:02:12&nbsp;PM</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>31</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>32</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>33</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>34</td>
+<td  class='tdalt1' style='text-align:left;'>public&nbsp;class&nbsp;ExcelProcess&nbsp;extends&nbsp;DataStoreReport&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>35</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>final&nbsp;String&nbsp;thisClassName&nbsp;=&nbsp;this.getClass().getName();</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>36</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>37</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//Field&nbsp;map</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>38</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>ADataColResult&nbsp;fCol1&nbsp;=&nbsp;mapDataCol(&#34;FirstCol&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>39</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>ADataColResult&nbsp;fCol2&nbsp;=&nbsp;mapDataCol(&#34;SecoundCol&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>40</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>ADataColResult&nbsp;fCol3&nbsp;=&nbsp;mapDataCol(&#34;ThirdCol&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>41</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>ADataColResult&nbsp;fCol4&nbsp;=&nbsp;mapDataCol(&#34;FourthCol&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>42</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>43</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>44</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;String&nbsp;outFileNamePrefix&nbsp;=&nbsp;&#34;&#34;;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>45</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>protected&nbsp;AFileO&nbsp;outXmlTxtFile&nbsp;=&nbsp;new&nbsp;AFileO();</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>46</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;String&nbsp;outExcelFileName&nbsp;=&nbsp;&#34;&#34;;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>47</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>48</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>AFileExcelPOI&nbsp;aFileExcelPOI&nbsp;=&nbsp;new&nbsp;AFileExcelPOI();</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>49</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>50</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>/**</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>51</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>52</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>53</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>public&nbsp;ExcelProcess()&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>54</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>super();</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>55</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>56</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>57</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>58</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>59</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>60</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>public&nbsp;DataStoreReport&nbsp;processThis(ACommDb&nbsp;acomm</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>61</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>,&nbsp;SourceProperty&nbsp;_aProperty,&nbsp;HtmlTargetServ&nbsp;_aHtmlServ)&nbsp;{</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>62</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>super.processThis(acomm,&nbsp;_aProperty,&nbsp;_aHtmlServ);&nbsp;//&nbsp;always&nbsp;call&nbsp;this&nbsp;first</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>63</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>64</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>getThisHtmlServ().outPageLine(acomm,&nbsp;&nbsp;thisClassName+&#34;=&gt;processThis&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>65</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>66</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>_aProperty.displayProperties(acomm);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>67</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>68</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>if&nbsp;(!outXmlTxtFile.isFileOpen())&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>69</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>70</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>outFileNamePrefix&nbsp;=&nbsp;getThisHtmlServ().getDirFileName().replace(&#34;.html&#34;,&nbsp;&#34;&#34;);</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>71</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>72</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>outExcelFileName&nbsp;=&nbsp;outFileNamePrefix+&#34;.xls&#34;;</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>73</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>74</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>try&nbsp;{</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>75</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>aFileExcelPOI.doOutputStart(outExcelFileName,&nbsp;&#34;First&nbsp;Tab&#34;);</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>76</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>77</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>throw&nbsp;new&nbsp;AException(acomm,&nbsp;e,&nbsp;&#34;exportFileExcel&#34;);</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>78</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>79</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aFileExcelPOI.getaWorkBookSheet().createFreezePane(0,2);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>80</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>81</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>/*</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>82</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>LinkedHashMap&lt;String,&nbsp;CellStyle&gt;&nbsp;rowCols&nbsp;=&nbsp;new&nbsp;LinkedHashMap&lt;String,&nbsp;CellStyle&gt;();</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>83</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>rowCols.put(acomm.getDbURL(),&nbsp;AFileExcelPOI.getDefaultHeaderStyle());</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>84</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>rowCols.put(&#34;table_name&#34;,&nbsp;null);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>85</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>rowCols.put(&#34;options&#34;,&nbsp;null);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>86</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>rowCols.put(acomm.getCurrTimestampOld(),&nbsp;null);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>87</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aFileExcelPOI.doOutputHeader(acomm,&nbsp;rowCols);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>88</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>*/</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>89</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//aFileExcelPOI.doOutputHeader(acomm,&nbsp;rowCols);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>90</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>91</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>List&lt;String&gt;&nbsp;aColList&nbsp;=&nbsp;new&nbsp;ArrayList&lt;String&gt;();</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>92</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aColList.add(acomm.getDbURL());</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>93</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aColList.add(&#34;table_name&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>94</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aColList.add(&#34;options&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>95</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aColList.add(acomm.getCurrTimestampOld());</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>96</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aFileExcelPOI.doOutputHeader(acomm,&nbsp;aColList);</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>97</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>98</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>_aHtmlServ.outTargetLine(acomm,</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>99</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&#34;outExcelFile&nbsp;Opened&nbsp;Name=&#34;&nbsp;+&nbsp;outExcelFileName);</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>100</td>
+<td  class='tdalt1' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>101</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>102</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>103</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>return&nbsp;this;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>104</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>105</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>106</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>107</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>108</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>/*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>109</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>110</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>111</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>112</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>113</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>public&nbsp;boolean&nbsp;doDataRowsNotFound(ACommDb&nbsp;acomm)</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>114</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>throws&nbsp;AException&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>115</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>super.doDataRowsNotFound(acomm);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>116</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>117</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>//getThisHtmlServ().outPageLine(acomm,&nbsp;&nbsp;&#34;DataRowsNotFound&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>118</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>119</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>return&nbsp;true;</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>120</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>121</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>122</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>123</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>/*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>124</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>125</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdaltmin'>&nbsp;*</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>126</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>127</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>128</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>129</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>public&nbsp;boolean&nbsp;doDataRow(ACommDb&nbsp;acomm,&nbsp;AException&nbsp;_exceptionSql,&nbsp;boolean&nbsp;_isRowBreak)</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>130</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>throws&nbsp;AException&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>131</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>132</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>super.doDataRow(acomm,&nbsp;_exceptionSql,&nbsp;_isRowBreak);&nbsp;//&nbsp;sends&nbsp;pout&nbsp;row</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>133</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>134</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>135</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>//getThisHtmlServ().outPageLine(acomm,&nbsp;&nbsp;&#34;DataRowFound&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>136</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>137</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>138</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>int&nbsp;_currRowNum&nbsp;=&nbsp;getSourceRowNum();</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>139</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;&nbsp;&nbsp;&nbsp;acomm.addPageMsgsLineOut(thisClassName+&#34;=&gt;Row#{&#34;&nbsp;+&nbsp;_currRowNum&nbsp;+&nbsp;&nbsp;&#34;}&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>140</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>141</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>142</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>143</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>144</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>return&nbsp;true;&nbsp;//or&nbsp;false&nbsp;to&nbsp;stop&nbsp;processing&nbsp;of&nbsp;file</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>145</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>146</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>147</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>148</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>/**</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>149</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*&nbsp;@return</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>150</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>&nbsp;*/</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>151</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>152</td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+<td  class='tdaltmin'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>153</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>public&nbsp;boolean&nbsp;doDataRowsEnded(ACommDb&nbsp;acomm)</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>154</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>throws&nbsp;AException&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>155</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>156</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>super.doDataRowsEnded(acomm);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>157</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>158</td>
+<td  class='tdaltmin'></td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>try&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>159</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>aFileExcelPOI.doOutputEnd();</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>160</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>}&nbsp;catch&nbsp;(IOException&nbsp;e)&nbsp;{</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>161</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>throw&nbsp;new&nbsp;AException(acomm,&nbsp;e,&nbsp;&#34;&nbsp;Close&nbsp;of&nbsp;outFileExcel&#34;);</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>162</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>163</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>164</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>165</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt1' style='text-align:left;'>return&nbsp;true;&nbsp;//or&nbsp;false&nbsp;to&nbsp;stop&nbsp;processing&nbsp;of&nbsp;file</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>166</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>167</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdalt2' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>168</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>169</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>170</td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+<td  class='tdalt1' style='text-align:left;'></td>
+<td  class='tdalt2' style='text-align:left;'></td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>171</td>
+<td  class='tdalt1' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>172</td>
+<td  class='tdalt1' style='text-align:left;'>//END</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt2' style='font-size:1em;;'>
+<td  class='tdhead'>173</td>
+<td  class='tdalt1' style='text-align:left;'>//</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   class='tralt1' style='font-size:1em;;'>
+<td  class='tdhead'>174</td>
+<td  class='tdalt1' style='text-align:left;'>}</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+<td  class='tdcolnull'>nul</td>
+</tr>
+<tr   style='border:0;font-size:1em;font-family:monospace;'>
+<td  style='background-color:#FFFFFF;color:#000080;border:0;'> </td>
+<td  class='tdbrkhd'>.</td>
+<td  class='tdbrkhd'>.</td>
+<td  class='tdbrkhd'>.</td>
+<td  class='tdbrkhd'>.</td>
+<td  class='tdbrkhd'>.</td>
+<td  class='tdbrkhd'>.</td>
+</tr>
+</tbody></table>
+<br>
+<br><table border='1' cellspacing='0' cellpadding='2' align=center width=100%><tbody  style='text-align:left;font-size:1em;font-family:monospace; '>
+<tr   style='border:0;font-size:1em;font-family:monospace;'>
+<td  class='tdtitleend'>Source&nbsp;Rows&nbsp;Read=175...More&nbsp;May&nbsp;Exist</td>
+<td  class='tdtitleend'>Data&nbsp;Rows=174&nbsp;Start@&nbsp;2&nbsp;End@&nbsp;999999999</td>
+<td  class='tdtitleend'>2017-02-11&nbsp;10:16:49.0</td>
+</tr>
+</tbody></table>
+<br>
+<div style='background-color:#ECECEC;color:#000000;text-align: left; valign: center;margin-top:2em;font-size:.8em;float:left;'>
+<span style=''><em style='border:.1em solid gray;padding:.3em;margin-top:1em;'>End</em></span><span style='margin-left:1em;'>ExcelProcess.java.html</span><span style='margin-left:1em;'>C:\projects\amawareJavaDev\projects\MainExcel\src\net\amaware\apps\mainexcel\ExcelProcess.java</span><span style='margin-left:1em;'>2017-02-11 10:16:39.707</span>
+</div>
+</body>
+</html>

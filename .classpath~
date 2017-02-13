@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/c0addan/amawareJavaDev/jar/db2jcc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/c0addan/amawareJavaDev/jar/amawarebase.jar" sourcepath="/AUtil/src"/>
+	<classpathentry kind="lib" path="C:/Users/c0addan/amawareJavaDev/jar/db2jcc_license_cisuz.jar"/>
+	<classpathentry kind="lib" path="C:/Users/c0addan/amawareJavaDev/jar/poi-3.6-20091214.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
