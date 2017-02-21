@@ -26,7 +26,7 @@ public class MainExcel {
 			final String thisClassName = "MainExcel";
 			//
 			try { 
-				acomm = new ACommDb(propFileName);
+				acomm = new ACommDb(propFileName, args);
 				
 				mainApp = new MainAppDataStore(acomm, _fileProcess, args, acomm.getFileTextDelimTab());
 				mainApp.setSourceHeadRowStart(1);

@@ -87,8 +87,8 @@ public class ExcelProcess extends DataStoreReport {
 		_aProperty.displayProperties(acomm);
 		
 		if (!outXmlTxtFile.isFileOpen()) {
-			
-			outFileNamePrefix = getThisHtmlServ().getDirFileName().replace(".html", "");
+
+			outFileNamePrefix = acomm.getOutFileDirectoryWithSep()+acomm.getArgFileName().replace(".xls", ".out");
 			
     		outExcelFileName = outFileNamePrefix+".xls";
 	   		//
