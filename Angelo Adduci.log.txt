@@ -1,18 +1,18 @@
 =>net.amaware.autil.ACommDb=>LOGFILE |Dir=C:\projects\amawareJavaDev\projects\MainExcel |Name=Angelo Adduci.log.txt
-=>net.amaware.autil.ACommDb=>Start @2017-02-23 20:55:34.292 |LogFileName=Angelo Adduci.log.txt
+=>net.amaware.autil.ACommDb=>Start @2017-03-14 19:48:38.854 |LogFileName=Angelo Adduci.log.txt
     |userName=Angelo Adduci |userHome=C:\Users\Angelo Adduci
     |userDirectoryName=C:\projects\amawareJavaDev\projects\MainExcel |environment=Windows 10
     |user.dir=C:\projects\amawareJavaDev\projects\MainExcel |dir seperator{\}
-AComm=>Arg#0=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls
-AComm=>ArgFileFullName{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls} |isPath{false} |ArgFilePath{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel} |ArgFileName{table_codes.exp-db153-dnapersonal_dna.xls}
-AComm=>OutFileDirectoryWithSep{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\output\}
-!!!MainApp!!! delim{	}
+AComm=>Arg#0=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql
+AComm=>ArgFileFullName{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql} |isPath{false} |ArgFilePath{C:\projects\amawareData\AMA-DNA\db-dna\sql} |ArgFileName{logs-group.sql}
+AComm=>OutFileDirectoryWithSep{C:\projects\amawareData\AMA-DNA\db-dna\sql\output\}
+!!!MainApp!!! delim{	} AppClass{net.amaware.apps.mainexcel.ExcelProcess}
 _______________Input Args_________________
-Arg#0=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls
-argSqlFileDir=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel
-argSqlFileFullName=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls
-argSqlFileExt=XLS
-argSqlFileNameSansExt=table_codes.exp-db153-dnapersonal_dna
+Arg#0=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql
+argSqlFileDir=C:\projects\amawareData\AMA-DNA\db-dna\sql
+argSqlFileFullName=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql
+argSqlFileExt=SQL
+argSqlFileNameSansExt=logs-group
 ------------------------------
 ------------------------------
 isFromfile=true
@@ -35,29 +35,29 @@ ____________________Report______________________
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataRowStart}...value{3}...valget{3}
 =>net.amaware.serv.SourceProperty=>PropName{propBasePropDir}...value{/projects/amawareJavaDev/propertiesAMAWARE}...valget{/projects/amawareJavaDev/propertiesAMAWARE}
 =>net.amaware.serv.SourceProperty=>PropName{dbURL}...value{jdbc:mysql://db141b.pair.com:3306/amaware_dna}...valget{jdbc:mysql://db141b.pair.com:3306/amaware_dna}
-=>net.amaware.serv.SourceProperty=>PropName{sourceNameFull}...value{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls}...valget{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls}
+=>net.amaware.serv.SourceProperty=>PropName{sourceNameFull}...value{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}...valget{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataHeadRowEnd}...value{2}...valget{2}
 =>net.amaware.serv.SourceProperty=>PropName{dbUserID}...value{amaware_9_w}...valget{amaware_9_w}
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataRowEnd}...value{999999999}...valget{999999999}
 =>net.amaware.serv.SourceProperty=>PropName{dbMaxRowsReturn}...value{2000}...valget{2000}
 =>net.amaware.serv.SourceProperty=>PropName{[ACOM-BASE-PROPERTIES]}...value{}...valget{}
 ____________________Report______________________
- |reportDirName= |reportDirNameFull=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls |propName=MainSqlReportDir |propVal=
+ |reportDirName= |reportDirNameFull=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql |propName=MainSqlReportDir |propVal=
 !!!MainApp!!! sourceFileProc delim{	}
-net.amaware.serv.HtmlTargetServ=>HTML Report File Opened |fileInName=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.html |fileInNameUse=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.html |Dir=C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\output |Name=table_codes.exp-db153-dnapersonal_dna.xls.html
-net.amaware.app.MainAppDataStore=>Processing Excel filename{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls} |outFileName{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.temp.txt}
+net.amaware.serv.HtmlTargetServ=>HTML Report File Opened |fileInName=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql.html |fileInNameUse=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql.html |Dir=C:\projects\amawareData\AMA-DNA\db-dna\sql\output |Name=ExcelProcess~logs-group.sql.html
+net.amaware.app.MainAppDataStore=>Processing  filename{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}
 __________________________________________________________net.amaware.autil.ACommDb:dbConGet()________________________________________________________
 =>net.amaware.autil.ACommDb=>DB Con Opened  |URL=jdbc:mysql://db141b.pair.com:3306/amaware_dna |User=amaware_9_w
   |DBProduct=MySQL  |DBVersion=5.6.31-log
-=>net.amaware.autil.ACommDb=>Current TS=2017-02-23 20:55:38.0
+=>net.amaware.autil.ACommDb=>Current TS=2017-03-14 19:48:43.0
 ________________________________________________________________________________________________________________________________________________________
-net.amaware.apps.mainexcel.ExcelProcess:processThis=>mapColsNum=6 titles{id|tab_name|code_name|code_value|user_mod_id|user_mod_ts|}
+net.amaware.apps.mainexcel.ExcelProcess:processThis=>mapColsNum=7 titles{id|tab_name|code_name|code_value|user_mod_id|user_mod_ts|other|}
 =>net.amaware.serv.SourceProperty=>PropName{dbUserPassword}...value{password being HIDDEN}
 =>net.amaware.serv.SourceProperty=>PropName{FileOutputDir}...value{output}...valget{output}
-=>net.amaware.serv.SourceProperty=>PropName{inputFileName}...value{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.temp.txt}...valget{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.temp.txt}
+=>net.amaware.serv.SourceProperty=>PropName{inputFileName}...value{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}...valget{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}
 =>net.amaware.serv.SourceProperty=>PropName{sourceHeadRowStart}...value{1}...valget{1}
-=>net.amaware.serv.SourceProperty=>PropName{sourceName}...value{table_codes.exp-db153-dnapersonal_dna.xls}...valget{table_codes.exp-db153-dnapersonal_dna.xls}
-=>net.amaware.serv.SourceProperty=>PropName{sourceDir}...value{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel}...valget{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel}
+=>net.amaware.serv.SourceProperty=>PropName{sourceName}...value{logs-group.sql}...valget{logs-group.sql}
+=>net.amaware.serv.SourceProperty=>PropName{sourceDir}...value{C:\projects\amawareData\AMA-DNA\db-dna\sql}...valget{C:\projects\amawareData\AMA-DNA\db-dna\sql}
 =>net.amaware.serv.SourceProperty=>PropName{sourceHeadRowEnd}...value{0}...valget{0}
 =>net.amaware.serv.SourceProperty=>PropName{[ACOM-DB]}...value{}...valget{}
 =>net.amaware.serv.SourceProperty=>PropName{[ACOM-USER-FILES]}...value{}...valget{}
@@ -68,10 +68,78 @@ net.amaware.apps.mainexcel.ExcelProcess:processThis=>mapColsNum=6 titles{id|tab_
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataRowStart}...value{4}...valget{4}
 =>net.amaware.serv.SourceProperty=>PropName{propBasePropDir}...value{/projects/amawareJavaDev/propertiesAMAWARE}...valget{/projects/amawareJavaDev/propertiesAMAWARE}
 =>net.amaware.serv.SourceProperty=>PropName{dbURL}...value{jdbc:mysql://db141b.pair.com:3306/amaware_dna}...valget{jdbc:mysql://db141b.pair.com:3306/amaware_dna}
-=>net.amaware.serv.SourceProperty=>PropName{inputFileNameExt}...value{XLS}...valget{XLS}
+=>net.amaware.serv.SourceProperty=>PropName{inputFileNameExt}...value{SQL}...valget{SQL}
 =>net.amaware.serv.SourceProperty=>PropName{sourceTemplateOutFileName}...value{}...valget{}
-=>net.amaware.serv.SourceProperty=>PropName{sourceNameFull}...value{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.temp.txt}...valget{C:\projects\amawareData\AMA-DNA\db-dna\data\MainExcel\table_codes.exp-db153-dnapersonal_dna.xls.temp.txt}
+=>net.amaware.serv.SourceProperty=>PropName{sourceNameFull}...value{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}...valget{C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql}
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataHeadRowEnd}...value{3}...valget{3}
 =>net.amaware.serv.SourceProperty=>PropName{dbUserID}...value{amaware_9_w}...valget{amaware_9_w}
 =>net.amaware.serv.SourceProperty=>PropName{sourceDataRowEnd}...value{999999999}...valget{999999999}
-=>net.amaware.serv.SourceProperty=>PropNam
+=>net.amaware.serv.SourceProperty=>PropName{dbMaxRowsReturn}...value{2000}...valget{2000}
+=>net.amaware.serv.SourceProperty=>PropName{[ACOM-BASE-PROPERTIES]}...value{}...valget{}
+=>net.amaware.serv.SourceProperty=>PropName{inputFileNameName}...value{logs-group}...valget{logs-group}
+ 
+net.amaware.serv.SourceServ:process=>logs-group.sql |Source=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql
+           |#DataStoreRowEndNum=999999999 |#SourceProcessRowMax=999999999 |#AcommDbPrepSmtMaxRows=2000
+=>mapColsNum=7
+=>net.amaware.aproc.SourceFileProc:SourceOpen=>FileName=C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql |FieldDelimiter{TAB} |DataRowStart=4 |DataRowStart=4 |DataRowEnd=999999999
+
+net.amaware.serv.SourceServ:sourceStarted=>C:\projects\amawareData\AMA-DNA\db-dna\sql\logs-group.sql |FileHeadRow#1 |DataHeadRow#3 |DataStart#4 |DataEnd#999999999
+ 
+net.amaware.apps.mainexcel.ExcelProcess:doSourceStarted=>mapColsNum=7
+net.amaware.apps.mainexcel.ExcelProcess=>ReportBreakNum=
+net.amaware.apps.mainexcel.ExcelProcess=>ReportBreakSumNum=
+net.amaware.apps.mainexcel.ExcelProcess:doSourceStarted Ended=>mapColsNum=7
+ 
+net.amaware.serv.SourceServ:process=>AboutTo sourceStart |ProcessMode=P
+ 
+net.amaware.aproc.SourceFileProc:sourceStart=> |ProcessMode=S |sourceDataRowEnd=999999999
+net.amaware.serv.SourceServ:process=>sourceStarted |ProcessMode=S
+net.amaware.serv.SourceServ=>HeadRow@Line#1 |lineItems{[--]
+net.amaware.serv.SourceServ:doRecFileHead=>FileHeadData rec#1 |Data=[--]
+net.amaware.serv.SourceServ=>ByPassLines |@recNum2 |rowStart{4 |rowEnd{999999999
+net.amaware.serv.SourceServ=>First byPassedLine#2 |lineItems{--parm-cmd propBasePropFile dna-amaware.properties;|
+----------net.amaware.apps.mainexcel.ExcelProcess-------display lines before first data row that is to be processed---------------
+net.amaware.apps.mainexcel.ExcelProcess----------------------SourceCmdLine#{2} |parm#{1} |parm{--parm-cmd propBasePropFile dna-amaware.properties;}
+net.amaware.serv.SourceServ:doSourceDataHeader=> |#DataColumns=7
+net.amaware.apps.mainexcel.ExcelProcess=>DataColNames=|id|tab_name|code_name|code_value|user_mod_id|user_mod_ts|other|
+net.amaware.apps.mainexcel.ExcelProcess=>DataColTitles=|id|tab_name|code_name|code_value|user_mod_id|user_mod_ts|other|
+net.amaware.serv.HtmlTargetServ=>outPageHeading=> |#Cols=7 |#Cloned=7 |DataHeadRow#3 |DataRow#0 |SourceRow#3
+net.amaware.serv.SourceServ:rowNext=>FirstDataRow@ 4 |ToEnd@ 999999999
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{4}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{5}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{6}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{7}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{8}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{9}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{10}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{11}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{12}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{13}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{14}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{15}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{16}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{17}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{18}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{19}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{20}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{21}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{22}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{23}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{24}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{25}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{26}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{27}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{28}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{29}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{30}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{31}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{32}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{33}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{34}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{35}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{36}
+net.amaware.apps.mainexcel.ExcelProcess=>Row#{37}
+net.amaware.aproc.SourceFileProc |At END row#=37
+=>net.amaware.autil.ACommDb=>DB Con Rollback=>These were rollbacked=> TotRowSelectCnts{0} TotRowInsertCnts{0} TotRowInsertDupsCnts{0} TotRowUpdateCnts{0} TotRowDeleteCnts{0}
+=>net.amaware.autil.ACommDb=>DB Con Closed=> TotRowSelectCnts{0} TotRowInsertCnts{0} TotRowInsertDupsCnts{0} TotRowUpdateCnts{0} TotRowDeleteCnts{0}
+=>net.amaware.autil.ACommDb=>Complete TS=2017-03-14 19:48:40.086

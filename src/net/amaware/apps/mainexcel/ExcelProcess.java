@@ -11,8 +11,10 @@ import java.util.List;
 import java.util.Vector;
 
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Sheet;
 
 import net.amaware.app.DataStoreReport;
+import net.amaware.autil.AComm;
 import net.amaware.autil.ACommDb;
 import net.amaware.autil.ADataColResult;
 import net.amaware.autil.AException;
@@ -43,6 +45,7 @@ public class ExcelProcess extends DataStoreReport {
 	ADataColResult fcode_value = mapDataCol("code_value");
 	ADataColResult fuser_mod_id = mapDataCol("user_mod_id");
  	ADataColResult fuser_mod_ts = mapDataCol("user_mod_ts");
+ 	ADataColResult fother = mapDataCol("other");
 //	ADataColResult fCol6 = mapDataCol("SixCol");
     //
 	//
@@ -50,24 +53,27 @@ public class ExcelProcess extends DataStoreReport {
 	protected AFileO outXmlTxtFile = new AFileO();	
     protected String outExcelFileName = "";
 	//
-	AFileExcelPOI aFileExcelPOI = new AFileExcelPOI();    
+	AFileExcelPOI aFileExcelPOI = new AFileExcelPOI();   
+	Sheet aSheetSummary;
+	Sheet aSheetDetail;
+	Sheet aSheetLog;
     //
 	/**
 	 * 
 	 */
-	class TabTwo {
+	class SummaryData {
         String  tab_name ="";
         String  code_name ="";
         String  code_value ="";
         
-        TabTwo(String itn, String icn, String icv) {
+        SummaryData(String itn, String icn, String icv) {
         	tab_name=itn;
         	code_name=icn;
-        	code_value=itn;
+        	code_value=icv;
         }
     }	
-	TabTwo aTabTwo; 
-	List<TabTwo> aTabTwoList = new ArrayList<TabTwo> ();
+	SummaryData aTabTwo; 
+	List<SummaryData> aTabTwoList = new ArrayList<SummaryData> ();
 	/**
 	 * 
 	 */
@@ -88,7 +94,9 @@ public class ExcelProcess extends DataStoreReport {
 		
 		if (!outXmlTxtFile.isFileOpen()) {
 
-			outFileNamePrefix = acomm.getOutFileDirectoryWithSep()+acomm.getArgFileName().replace(".xls", ".out");
+			//outFileNamePrefix = acomm.getOutFileDirectoryWithSep()+acomm.getArgFileName().replace(".xls", ".out");
+			outFileNamePrefix = acomm.getOutFileDirectoryWithClassName()+AComm.getArgFileName();
+			
 			
     		outExcelFileName = outFileNamePrefix+".xls";
 	   		//
@@ -103,23 +111,57 @@ public class ExcelProcess extends DataStoreReport {
 
 	/*
 	 * 
-	 * 
 	 */
 	
 	public boolean  doDataHead(ACommDb acomm, int rowNum) throws AException {
 		super.doDataHead(acomm, rowNum);
 		
 		try {
-			aFileExcelPOI.doOutputStart(outExcelFileName, "From Input Excel");
+			aSheetSummary = aFileExcelPOI.doOutputStart(outExcelFileName, "Summary");
 		} catch (IOException e) {
 			throw new AException(acomm, e, "exportFileExcel");
 		}
-		aFileExcelPOI.getaWorkBookSheet().createFreezePane(0,2);
-   		aFileExcelPOI.doOutputHeader(acomm,
-   				  (new ArrayList<String>(getSourceHeadVector()))
-   				  , getSourceDataHeadList()
-   				  );
 		
+		aSheetSummary.createFreezePane(0,2);
+   		aFileExcelPOI.doOutputHeader(acomm,
+   				  //(new ArrayList<String>(getSourceHeadVector()))
+   		          (new ArrayList<String>(
+			         Arrays.asList(aSheetSummary.getSheetName()
+			                       , AComm.getArgFileName()
+			                       , acomm.getCurrTimestampAny()
+			        		      )
+			         )
+   				  )
+				  ,(Arrays.asList(ftab_name.getColumnTitle()
+				  	        //, fcode_name.getColumnTitle()
+					        //, fcode_value.getColumnTitle()
+					        , "Count Tab"
+					        //, "Count Code"
+					        //, "Count Value"
+				            ) 
+                  )
+
+   			  );
+		
+   		//
+   		aSheetDetail = aFileExcelPOI.doCreateNewSheet("Detail");
+   		aSheetDetail.createFreezePane(0,2);
+   		aFileExcelPOI.doOutputHeader(acomm,
+ 				  (Arrays.asList(aSheetDetail.getSheetName()))
+				  , getSourceDataHeadList()
+ 				);
+   		//
+		aSheetLog = aFileExcelPOI.doCreateNewSheet("Log");
+		aSheetLog.createFreezePane(0,2);
+   		aFileExcelPOI.doOutputHeader(acomm,
+				  (Arrays.asList(aSheetLog.getSheetName()))
+				  ,(Arrays.asList("SourceRow#"
+				  	        , "Item"
+				  	        , "Msg"
+				            ) 
+                  )
+				);
+   		//
 		return true;
 
 	}	
@@ -153,12 +195,27 @@ public class ExcelProcess extends DataStoreReport {
 		int _currRowNum = getSourceRowNum();
 	    acomm.addPageMsgsLineOut(thisClassName+"=>Row#{" + _currRowNum +  "}");
 
-   		aFileExcelPOI.doOutputRowNext(acomm, 
-			       //(Arrays.asList("colRed", "Blue", "Green") )
-   				getDataRowColsToList()
+   		aFileExcelPOI.doOutputRowNext(acomm 
+   			         , aSheetDetail
+   				     , getDataRowColsToList()
 			     );
+	    
    		//aTabTwoList.add(new TabTwo(ftab_name.getColumnValue(), ftab_name.getColumnValue(),ftab_name.getColumnValue()));
-   		aTabTwoList.add(new TabTwo(ftab_name.getColumnValue(), fcode_name.getColumnValue(),fcode_value.getColumnValue()));
+   		aTabTwoList.add(new SummaryData(ftab_name.getColumnValue(), fcode_name.getColumnValue(),fcode_value.getColumnValue()));
+   		//
+   		
+   		if (_currRowNum == getSourceDataRowStartNum()) {
+   	  		aFileExcelPOI.doOutputRowNext(acomm 
+  			      , aSheetLog
+  				  , (Arrays.asList(
+  						    ""+getSourceRowNum()
+  						    ,"count"
+  				  	        , "#Cols{"+getDataRowColsToList().size() +"}"
+  					        ) 
+  			        )
+    		);
+   			
+   		}
 		
 		return true; //or false to stop processing of file
 
@@ -171,42 +228,95 @@ public class ExcelProcess extends DataStoreReport {
 
 	public boolean doDataRowsEnded(ACommDb acomm)
 	throws AException {
-		
+        //		
 		super.doDataRowsEnded(acomm);
         //
-		aFileExcelPOI.doCreateNewSheet("New");
-		aFileExcelPOI.getaWorkBookSheet().createFreezePane(0,2);
+		String tab_namePrev="";
+		String code_namePrev="";
+		String code_valuePrev="";
 		
-   		aFileExcelPOI.doOutputHeader(acomm,
- 				  (Arrays.asList(acomm.getDbURL()
- 					  	        , "table_name"
- 						        , "options"
- 						        , acomm.getCurrTimestampOld()
- 						        ) 
- 				  )
-				  ,(Arrays.asList(ftab_name.getColumnTitle()
-				  	        , fcode_name.getColumnTitle()
-					        , fcode_value.getColumnTitle()
-					        , fuser_mod_id.getColumnTitle()
-					        , fuser_mod_ts.getColumnTitle()
-				            ) 
-                    )
- 				);
+		int tab_nameCnt=0;
+		int code_nameCnt=0;
+		int code_valueCnt=0;
 		
-   		
-		 for (TabTwo aTabTwoList : aTabTwoList) {
-	   		 aFileExcelPOI.doOutputRowNext(acomm, 
-				       //(Arrays.asList("colRed", "Blue", "Green") )
-					  (Arrays.asList(aTabTwoList.tab_name
-					  	        , aTabTwoList.code_name
-					  	        //, aTabTwoList.code_name
-						        , aTabTwoList.code_value
-						        //, acomm.getDbUserID()
-						        , this.getClass().getName()
-						        , acomm.getCurrTimestampOld()
-						        ) 
-				     ));
-	     }
+		int itemcnt=0;
+		for (SummaryData aTabTwoList : aTabTwoList) {
+			
+			++itemcnt;
+			
+			if (itemcnt > 1) { 
+				if (!aTabTwoList.tab_name.contentEquals(tab_namePrev)) {
+			   		 aFileExcelPOI.doOutputRowNext(acomm 
+						      , aSheetSummary
+							  , (Arrays.asList(tab_namePrev
+							  	       // , code_namePrev
+								       // , code_valuePrev
+								        , ""+tab_nameCnt
+								       // , ""+code_nameCnt
+								      //  , ""+code_valueCnt
+								        ) 
+						        )
+							  );
+				}
+				/*
+				if (!aTabTwoList.code_name.contentEquals(code_namePrev)) {
+			   		 aFileExcelPOI.doOutputRowNext(acomm 
+						      , aSheetSummary
+							  , (Arrays.asList(tab_namePrev
+							  	        , code_namePrev
+								        , code_valuePrev
+								        , ""+tab_nameCnt
+								        , ""+code_nameCnt
+								        , ""+code_valueCnt
+								        ) 
+						        )
+							  );
+				}
+				if (!aTabTwoList.code_value.contentEquals(code_valuePrev)) {
+			   		 aFileExcelPOI.doOutputRowNext(acomm 
+						      , aSheetSummary
+							  , (Arrays.asList(tab_namePrev
+							  	        , code_namePrev
+								        , code_valuePrev
+								        , ""+tab_nameCnt
+								        , ""+code_nameCnt
+								        , ""+code_valueCnt
+								        ) 
+						        )
+							  );
+				}
+				*/
+				
+			}
+            //			
+			if (aTabTwoList.tab_name.contentEquals(tab_namePrev)) {
+				++tab_nameCnt;
+			}
+			if (aTabTwoList.code_name.contentEquals(code_namePrev)) {
+				++code_nameCnt;
+			}
+			if (aTabTwoList.code_value.contentEquals(code_valuePrev)) {
+				++code_valueCnt;
+			}
+	   		 
+
+	 		tab_namePrev=aTabTwoList.tab_name;
+			code_namePrev=aTabTwoList.code_name;
+			code_valuePrev=aTabTwoList.code_value;
+			
+			
+	    }
+		//
+  		aFileExcelPOI.doOutputRowNext(acomm 
+			      , aSheetLog
+				  , (Arrays.asList(""+getSourceRowNum()
+						    , "At End"
+						    , "#SummaryRows{"+aSheetSummary.getLastRowNum() +"}"
+						      + " |#DetailRows{"+aSheetDetail.getLastRowNum() +"}"
+					        ) 
+			        )
+		);
+		
 		//
    		try {
 			aFileExcelPOI.doOutputEnd();
