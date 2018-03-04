@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/AUtil"/>
 	<classpathentry exported="true" kind="lib" path="/projects/amawareJavaDev/jar/amawarebase.jar" sourcepath="/AUtil/src"/>
 	<classpathentry kind="lib" path="/projects/amawareJavaDev/jar/poi.jar"/>
 	<classpathentry kind="lib" path="/projects/amawareJavaDev/jar/poi-ooxml.jar"/>
@@ -9,6 +10,5 @@
 	<classpathentry kind="lib" path="C:/projects/amawareJavaDev/jar/poi-ooxml-schemas.jar"/>
 	<classpathentry kind="lib" path="C:/projects/amawareJavaDev/jar/dom4j.jar"/>
 	<classpathentry kind="lib" path="C:/projects/amawareJavaDev/jar/mysql-connector-java.jar"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/AUtil"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

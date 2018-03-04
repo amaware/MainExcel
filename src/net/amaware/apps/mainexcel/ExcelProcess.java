@@ -17,6 +17,7 @@ import net.amaware.app.DataStoreReport;
 import net.amaware.autil.AComm;
 import net.amaware.autil.ACommDb;
 import net.amaware.autil.ADataColResult;
+import net.amaware.autil.ADatabaseAccess;
 import net.amaware.autil.AException;
 import net.amaware.autil.AFileExcelPOI;
 import net.amaware.autil.AFileO;
@@ -37,6 +38,8 @@ import net.amaware.serv.SourceProperty;
 
 public class ExcelProcess extends DataStoreReport {
 	final String thisClassName = this.getClass().getName();
+    final static String propFileDbLOGS          = "dna-amaware.properties";
+    final static String propFileDbTABLE_CODES   = "dna-amaware.properties";
 	//
 	//Field map
 	ADataColResult fid = mapDataCol("id");
@@ -53,11 +56,14 @@ public class ExcelProcess extends DataStoreReport {
 	protected AFileO outXmlTxtFile = new AFileO();	
     protected String outExcelFileName = "";
 	//
-	AFileExcelPOI aFileExcelPOI = new AFileExcelPOI();   
+	AFileExcelPOI aFileExcelPOI;   
 	Sheet aSheetSummary;
 	Sheet aSheetDetail;
 	Sheet aSheetLog;
+	Sheet aSheetLog2;
     //
+	ADatabaseAccess thisADatabaseAccess;	
+	//
 	/**
 	 * 
 	 */
@@ -115,23 +121,21 @@ public class ExcelProcess extends DataStoreReport {
 	
 	public boolean  doDataHead(ACommDb acomm, int rowNum) throws AException {
 		super.doDataHead(acomm, rowNum);
-		
+/*		
 		try {
 			aSheetSummary = aFileExcelPOI.doOutputStart(outExcelFileName, "Summary");
 		} catch (IOException e) {
 			throw new AException(acomm, e, "exportFileExcel");
 		}
-		
-		aSheetSummary.createFreezePane(0,2);
-   		aFileExcelPOI.doOutputHeader(acomm,
+*/		
+		aFileExcelPOI = new AFileExcelPOI(acomm, outExcelFileName);
+   		//
+		aSheetSummary = aFileExcelPOI.doCreateNewSheet("Summary",   2				
    				  //(new ArrayList<String>(getSourceHeadVector()))
-   		          (new ArrayList<String>(
-			         Arrays.asList(aSheetSummary.getSheetName()
-			                       , AComm.getArgFileName()
+   		          , (Arrays.asList(AComm.getArgFileName()
 			                       , acomm.getCurrTimestampAny()
 			        		      )
-			         )
-   				  )
+   				    )
 				  ,(Arrays.asList(ftab_name.getColumnTitle()
 				  	        //, fcode_name.getColumnTitle()
 					        //, fcode_value.getColumnTitle()
@@ -140,32 +144,36 @@ public class ExcelProcess extends DataStoreReport {
 					        //, "Count Value"
 				            ) 
                   )
-
    			  );
 		
    		//
-   		aSheetDetail = aFileExcelPOI.doCreateNewSheet("Detail");
-   		aSheetDetail.createFreezePane(0,2);
-   		aFileExcelPOI.doOutputHeader(acomm,
- 				  (Arrays.asList(aSheetDetail.getSheetName()))
+   		aSheetDetail =  aFileExcelPOI.doCreateNewSheet("Detail", 2
+ 				  ,(Arrays.asList(acomm.getCurrTimestampNew()))
 				  , getSourceDataHeadList()
  				);
    		//
-		aSheetLog = aFileExcelPOI.doCreateNewSheet("Log");
-		aSheetLog.createFreezePane(0,2);
-   		aFileExcelPOI.doOutputHeader(acomm,
-				  (Arrays.asList(aSheetLog.getSheetName()))
+		aSheetLog = aFileExcelPOI.doCreateNewSheet("Log", 2
+				  ,(Arrays.asList(acomm.getCurrTimestampNew()))
 				  ,(Arrays.asList("SourceRow#"
 				  	        , "Item"
 				  	        , "Msg"
 				            ) 
                   )
 				);
+		aSheetLog2 = aFileExcelPOI.doCreateNewSheet("Log2", 2
+				  ,(Arrays.asList(acomm.getCurrTimestampNew()))
+				  ,(Arrays.asList("SourceRow#"
+				  	        , "Item"
+				  	        , "Msg"
+				            ) 
+                )
+				);
+		
    		//
 		return true;
 
 	}	
-	
+
     
 	public boolean doDataRowsNotFound(ACommDb acomm)
 	throws AException {
@@ -197,7 +205,7 @@ public class ExcelProcess extends DataStoreReport {
 
    		aFileExcelPOI.doOutputRowNext(acomm 
    			         , aSheetDetail
-   				     , getDataRowColsToList()
+   				     , getDataRowColsValueList()
 			     );
 	    
    		//aTabTwoList.add(new TabTwo(ftab_name.getColumnValue(), ftab_name.getColumnValue(),ftab_name.getColumnValue()));
@@ -210,13 +218,24 @@ public class ExcelProcess extends DataStoreReport {
   				  , (Arrays.asList(
   						    ""+getSourceRowNum()
   						    ,"count"
-  				  	        , "#Cols{"+getDataRowColsToList().size() +"}"
+  				  	        , "#Cols{"+getDataRowColsValueList().size() +"}"
   					        ) 
   			        )
     		);
+   	  		aFileExcelPOI.doOutputRowNext(acomm 
+    			      , aSheetLog2
+    				  , (Arrays.asList(
+    						    ""+getSourceRowNum()
+    						    ,"count"
+    				  	        , "#Cols{"+getDataRowColsValueList().size() +"}"
+    					        ) 
+    			        )
+      		);
    			
    		}
 		
+   		
+   		
 		return true; //or false to stop processing of file
 
 	}
@@ -258,34 +277,6 @@ public class ExcelProcess extends DataStoreReport {
 						        )
 							  );
 				}
-				/*
-				if (!aTabTwoList.code_name.contentEquals(code_namePrev)) {
-			   		 aFileExcelPOI.doOutputRowNext(acomm 
-						      , aSheetSummary
-							  , (Arrays.asList(tab_namePrev
-							  	        , code_namePrev
-								        , code_valuePrev
-								        , ""+tab_nameCnt
-								        , ""+code_nameCnt
-								        , ""+code_valueCnt
-								        ) 
-						        )
-							  );
-				}
-				if (!aTabTwoList.code_value.contentEquals(code_valuePrev)) {
-			   		 aFileExcelPOI.doOutputRowNext(acomm 
-						      , aSheetSummary
-							  , (Arrays.asList(tab_namePrev
-							  	        , code_namePrev
-								        , code_valuePrev
-								        , ""+tab_nameCnt
-								        , ""+code_nameCnt
-								        , ""+code_valueCnt
-								        ) 
-						        )
-							  );
-				}
-				*/
 				
 			}
             //			
@@ -303,12 +294,52 @@ public class ExcelProcess extends DataStoreReport {
 	 		tab_namePrev=aTabTwoList.tab_name;
 			code_namePrev=aTabTwoList.code_name;
 			code_valuePrev=aTabTwoList.code_value;
-			
+		
 			
 	    }
 		//
+		
+		String tabName="table_codes";
+		
+        thisADatabaseAccess = new ADatabaseAccess(acomm, propFileDbTABLE_CODES);
+        thisADatabaseAccess.doQueryRsExcel(aFileExcelPOI
+                                              , tabName
+                                              , "Select *"
+                                          +" from " + tabName 
+                            //+ " Where field_nme  = '" + ufieldname +"'" 
+                                          
+                            //+ " order by tab_name"
+                            + " order by tab_name, code_name, code_value"
+                                              );     
+		
+		//
+        thisADatabaseAccess = new ADatabaseAccess(acomm, propFileDbLOGS);
+        thisADatabaseAccess.doQueryRsExcel(aFileExcelPOI
+                                              , "logs"
+                                              , "Select * from logs " 
+                                                + " order by entry_type, entry_subject, entry_topic"
+                                              );     
+        thisADatabaseAccess = new ADatabaseAccess(acomm, propFileDbLOGS);
+        thisADatabaseAccess.doQueryRsExcel(aFileExcelPOI
+                                          , "logs Again"
+                                          , "Select *"
+                                            +" from logs " 
+            
+                                            + " order by entry_type, entry_subject, entry_topic"
+                );     
+        
+        //
   		aFileExcelPOI.doOutputRowNext(acomm 
 			      , aSheetLog
+				  , (Arrays.asList(""+getSourceRowNum()
+						    , "At End"
+						    , "#SummaryRows{"+aSheetSummary.getLastRowNum() +"}"
+						      + " |#DetailRows{"+aSheetDetail.getLastRowNum() +"}"
+					        ) 
+			        )
+		);
+  		aFileExcelPOI.doOutputRowNext(acomm 
+			      , aSheetLog2
 				  , (Arrays.asList(""+getSourceRowNum()
 						    , "At End"
 						    , "#SummaryRows{"+aSheetSummary.getLastRowNum() +"}"
