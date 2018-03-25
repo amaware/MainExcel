@@ -50,14 +50,29 @@ public class MainExcel {
 		        
 		        //				
 				
-		        appADatabaseAccess.doQueryRsExcel(aFileExcelPOI
-		                , "doQueryRsExcel "+appADatabaseAccess.getThisTableName()+" "
-		                , "Select *" 
-		                  +" from "+appADatabaseAccess.getThisTableName()+" " 
-		                 //+ " Where field_nme  = '" + ufieldname +"'" 
-		                  //+ " order by tab_name"
-		                 //+ " order by subject, topic, item"
-		                 );		
+		        
+				appADatabaseAccess.doQueryRsExcel(aFileExcelPOI
+						//thisDataTrackAccess.doQueryRsExcel(aFileExcelPOI
+				                , "doQueryRsExcel data_track"
+				                , "Select *"
+				                  +" from data_track " 
+				                 //+ " Where field_nme  = '" + ufieldname +"'" 
+				                 //+ " order by tab_name"
+				                 + " order by subject, topic, item"
+				                 );
+				        //
+						//thisDataTrackAccess.doDbMetadataExcelSheet(aFileExcelPOI,"DataTrack MetaData");
+						//
+				appADatabaseAccess.doQueryRsExcel(aFileExcelPOI
+						//thisDataTrackAccess.childDataTrackStoreAccess.doQueryRsExcel(aFileExcelPOI
+				                , "doQueryRsExcel data_track_store"
+				                , "Select *"
+				                  +" from data_track_store " 
+				                 //+ " Where source_nme  = '" + thisDataTrackAccess.getTrackFileName() +"'"
+				                 //+ " order by tab_name"
+				                 + " order by  run_start_ts desc, source_nme, source_mod_ts, data_track_id"
+				                 );		        
+		        
 		        
 		   		try {
 					aFileExcelPOI.doOutputEnd(acomm);
@@ -92,7 +107,7 @@ public class MainExcel {
 				
 			} catch (AExceptionSql e1) {
 				
-				acomm.addPageMsgsLineOut("MainExcelDbLoad AExceptionSql msg{"+e1.getMessage()+e1.getExceptionMsg()+"}");
+				acomm.addPageMsgsLineOut("MainExcel AExceptionSql msg{"+e1.getMessage()+e1.getExceptionMsg()+"}");
 				
 				throw e1;
 				
